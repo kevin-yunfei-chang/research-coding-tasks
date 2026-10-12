@@ -1,0 +1,10 @@
+OLS estimation, Dep. Var.: mortality
+Observations: 13,746
+Fixed-effects: county_code: 41,  date: 364
+Standard-errors: Clustered (county_code) 
+    Estimate Std. Error t value  Pr(>|t|)    
+aqi 0.527712   0.010236 51.5542 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+RMSE: 6.08503     Adj. R2: 0.748071
+                Within R2: 0.518672

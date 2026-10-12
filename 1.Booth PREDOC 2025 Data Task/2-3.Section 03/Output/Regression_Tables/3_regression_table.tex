@@ -1,0 +1,40 @@
+\begin{table}[!htbp]
+\centering
+\caption{Air Quality and Synthetic Mortality: County--Day Panel}
+\label{tab:pollution_mortality}
+\small
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lccc}
+\toprule
+Dependent variable: Synthetic mortality & (1) & (2) & (3) \\
+Specification & Baseline TWFE & Lagged AQI & CBSA interaction \\
+\midrule
+AQI$_{it}$ & 0.5277$^{***}$ & 0.3048$^{***}$ & 0.5336$^{***}$ \\
+ & (0.0102) & (0.0041) & (0.0194) \\
+\addlinespace[3pt]
+AQI$_{i,t-1}$ &  & 0.3687$^{***}$ &  \\
+ &  & (0.0045) &  \\
+\addlinespace[3pt]
+AQI$_{it}$ $\times$ CBSA$_i$ &  &  & -0.0067 \\
+ &  &  & (0.0195) \\
+\addlinespace[6pt]
+County fixed effects & Yes & Yes & Yes \\
+Date fixed effects & Yes & Yes & Yes \\
+Observations & 13,746 & 13,746 & 13,746 \\
+County clusters & 41 & 41 & 41 \\
+$R^2$ & 0.7555 & 0.8372 & 0.7555 \\
+Within $R^2$ & 0.5187 & 0.6795 & 0.5187 \\
+\bottomrule
+\end{tabular}
+\vspace{5pt}
+\begin{minipage}{0.96\textwidth}
+\footnotesize\emph{Notes:} Ordinary least squares with county and
+calendar-date fixed effects throughout. Standard errors clustered by county
+are reported in parentheses. $^{***}p<0.01$, $^{**}p<0.05$,
+$^{*}p<0.10$. Model (2) uses the previous calendar day's AQI and may have
+fewer observations. CBSA indicates whether the county belongs to a
+Core-Based Statistical Area; the indicator's main effect is absorbed by
+county fixed effects. The dependent variable is SYNTHETIC, not actual
+mortality. Estimates describe associations, not causal effects.
+\end{minipage}
+\end{table}
